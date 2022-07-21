@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="pixiemedia" translate="label" sortOrder="999">
+            <label>Pixie Media</label>
+        </tab>
+        <section id="nowelcomeemail" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+            <label>No Welcome Email</label>
+            <tab>pixiemedia</tab>
+            <resource>PixieMedia_NoWelcomeEmail::config_pixiemedia_nowelcomeemail</resource>
+            <group id="options" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>Configuration</label>
+                <field id="is_disabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Is Welcome Email Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
